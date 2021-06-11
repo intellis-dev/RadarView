@@ -1,0 +1,34 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion "android-S"
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+       // applicationId "com.intellis.ui.radar"
+        minSdkVersion 14
+        targetSdkVersion "S"
+        versionCode 1
+        versionName "1.0"
+        resConfigs "en"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            //shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:+'
+}
